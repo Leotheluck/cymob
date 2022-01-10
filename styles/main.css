@@ -1,0 +1,677 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap');
+
+:root
+{
+    --font: "Inter", sans-serif;
+    --color-1: #69B865;
+    --color-2: #FFFFFF;
+    --color-3: #000000;
+    --color-4: #212e21;
+}
+
+*
+{
+    margin: 0;
+    font-family: var(--font);
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+::selection
+{
+    background: var(--color-4);
+    color: var(--color-2);
+}
+
+/* Header */
+
+.header
+{
+    display: flex;
+    width: 100vw;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    height: 5vh;
+    background: var(--color-4);
+    position: fixed;
+    opacity: 0.9;
+    z-index: 5;
+}
+
+/* Left */
+
+.header .left
+{
+    width: 10vw;
+    height: 5vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header .left a
+{
+    margin-top: 1vh;
+}
+
+.header .left a img
+{
+    max-height: 2vh;
+}
+
+/* Right */
+
+.header .right
+{
+    width: 50vw;
+    height: 5vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header .right .item
+{
+    margin-left: 2vw;
+    margin-top: 0.15vh;
+    font-size: 0.8vw;
+    color: var(--color-2);
+    font-weight: 400;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.header .right .item:hover
+{
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.header .right img
+{
+    margin-left: 1.5vw;
+    margin-top: 0.15vh;
+    height: 2vh;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.header .right img:hover
+{
+    opacity: 1;
+}
+
+.header .right .search
+{
+    margin-top: 0.25vh;
+    height: 1.9vh;
+    margin-left: 3vw;
+}
+
+/* Main */
+
+.main
+{
+    width: 100vw;
+    padding-top: 5vh;
+    background: var(--color-1);
+}
+
+.main .landing
+{
+    width: 60vw;
+    height: 95vh;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    display: flex;
+}
+
+.main .landing .left
+{
+    width: 1.4vw;
+    overflow: hidden;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main .landing .left .bar
+{
+    width: 1.4vw;
+    height: 0.75vh;
+    background: var(--color-2);
+}
+
+.main .landing .center
+{
+    width: 56vw;
+    margin-left: 2.6vw;
+    height: 95vh;
+}
+
+.main .landing .center .text
+{
+    position: absolute;
+    width: 40vw;
+    height: 71.5vh;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    z-index: 4;
+}
+
+.main .landing .center .text .title
+{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 3vw;
+    font-weight: 500;
+    line-height: 90%;
+    letter-spacing: -0.1vw;
+    color: var(--color-2);
+}
+
+.main .landing .center .text .title b
+{
+    font-size: 4vw;
+    font-weight: 700;
+}
+
+.main .landing .center .text .price
+{
+    width: 27.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.main .landing .center .text .price h2
+{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 3vw;
+    font-weight: 500;
+    line-height: 90%;
+    letter-spacing: -0.1vw;
+    color: var(--color-2);
+}
+
+.main .landing .center .text .price p
+{
+    font-size: 1vw;
+    color: var(--color-2);
+}
+
+.main .landing .center .text .buttons
+{
+    width: 27.5vw;
+    margin-top: 3vh;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .landing .center .text .buttons .button
+{
+    width: 10vw;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-4);
+    color: var(--color-2);
+    font-size: 1vw;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.main .landing .center .text .buttons .button:hover
+{
+    transform: scale(0.975);
+}
+
+.main .landing .center .text .buttons .button.first
+{
+    background: var(--color-2);
+    color: var(--color-4);
+    width: 15vw;
+}
+
+.main .landing .center .background-image
+{
+    position: absolute;
+    z-index: 7;
+    width: 55vw;
+    pointer-events: none;
+    height: 105vh;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    transform: translateX(-75vw);
+    opacity: 0;
+    transition: 3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.main .landing .center .background-imagen
+{
+    position: absolute;
+    z-index: 7;
+    width: 35vw;
+    pointer-events: none;
+    height: 105vh;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    transform: translateX(-75vw);
+    opacity: 0;
+    transition: 3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Engagements */
+
+.main .engagements
+{
+    padding-top: 10vh;
+    width: 60vw;
+    height: 50vh;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    overflow: hidden;
+    background: var(--color-2);
+    display: flex;
+}
+
+.main .engagements .left
+{
+    width: 25vw;
+    margin-right: 5vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.main .engagements .left .title
+{
+    font-size: 3vw;
+    font-family: "Space Grotesk", sans-serif;
+    line-height: 90%;
+    letter-spacing: -0.1vw;
+}
+
+.main .engagements .right
+{
+    width: 30vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main .engagements .right .item
+{
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+.main .engagements .right .item:last-of-type
+{
+    margin-bottom: 0;
+}
+
+.main .engagements .right .item img
+{
+    width: 1.75vw;
+}
+
+.main .engagements .right .item .gear
+{
+    animation: rotate 10s linear infinite;
+}
+
+.main .engagements .right .item .tyre
+{
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+.main .engagements .right .item .text
+{
+    width: 26.5vw;
+    font-size: 0.8vw;
+}
+
+.main .engagements .right .item .text b
+{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1vw;
+}
+
+/* About us */
+
+.main .about-us
+{
+    width: 60vw;
+    height: 60vh;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    overflow: hidden;
+    background: var(--color-1);
+    display: flex;
+}
+
+.main .about-us .left
+{
+    width: 30vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.main .about-us .left .under
+{
+    width: 30vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main .about-us .left .under img
+{
+    width: 30vw;
+    margin-bottom: 2vh;
+    border-radius: 5px;
+}
+
+.main .about-us .left .under .title
+{
+    font-size: 1.5vw;
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--color-2);
+}
+
+.main .about-us .left .under .text
+{
+    color: var(--color-2);
+}
+
+.main .about-us .left .overlay
+{
+    position: absolute;
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+
+.main .about-us .left .overlay .scooter1
+{
+    transform: translateX(-5vw) translateY(-25vh) rotateY(-180deg) rotateZ(30deg);
+    width: 10vw;
+    animation: rotate2 3s linear infinite;
+}
+
+@keyframes rotate2 {
+    0%{
+        transform: translateX(-5vw) translateY(-25vh) rotateY(360deg) rotateZ(30deg);
+    } 100% {
+        transform: translateX(-5vw) translateY(-25vh) rotateY(0deg) rotateZ(30deg);
+    }
+}
+
+.main .about-us .left .overlay .scooter2
+{
+    transform: translateX(14vw) translateY(0vh) rotateY(0deg) rotateZ(30deg);
+    width: 14vw;
+    animation: rotate3 4s linear infinite;
+}
+
+@keyframes rotate3 {
+    0%{
+        transform: translateX(14vw) translateY(0vh) rotateY(0deg) rotateZ(30deg);
+    } 100% {
+        transform: translateX(14vw) translateY(0vh) rotateY(360deg) rotateZ(30deg);
+    }
+}
+
+.main .about-us .right
+{
+    width: 25vw;
+    margin-left: 5vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.main .about-us .right .title
+{
+    font-size: 3vw;
+    font-family: "Space Grotesk", sans-serif;
+    line-height: 90%;
+    text-align: right;
+    letter-spacing: -0.1vw;
+    color: var(--color-2);
+}
+
+/* Products */
+
+.main .products
+{
+    width: 60vw;
+    height: 60vh;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    overflow: hidden;
+    background: var(--color-2);
+    display: flex;
+    justify-content: space-around;
+}
+
+.main .products .product
+{
+    width: 20vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+
+.main .products .product img
+{
+    height: 30vh;
+    margin-bottom: 2vh;
+    transition: 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.main .products .product img:hover
+{
+    transform: scale(0.9) rotateY(28deg);
+}
+
+.main .products .product .title
+{
+    font-size: 2.5vw;
+    margin-bottom: 0.1vh;
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--color-4);
+}
+
+.main .products .product .description
+{
+    font-size: 0.8vw;
+    color: var(--color-4);
+    text-align: center;
+}
+
+.main .products .product .button
+{
+    margin-top: 2vh;
+    width: 8vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-4);
+    color: var(--color-2);
+    font-size: 0.9vw;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Footer */
+
+.main .footer
+{
+    width: 60vw;
+    height: 30vh;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    overflow: hidden;
+    background: var(--color-1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .footer .left
+{
+    width: 20vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main .footer .left .top
+{
+    width: 20vw;
+}
+
+.main .footer .left .top .logo
+{
+    width: 20vw;
+}
+
+.main .footer .left .bottom
+{
+    margin-top: 1vh;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .footer .left .bottom a
+{
+    font-size: 0.9vw;
+    color: var(--color-2);
+    text-decoration: none;
+    opacity: 0.9;
+    cursor: pointer;
+    margin-right: 0.2vw;
+}
+
+.main .footer .left .bottom a:hover
+{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.main .footer .left .bottom .social img
+{
+    width: 1.2vw;
+}
+
+.main .footer .right
+{
+    width: 22.5vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main .footer .right .title
+{
+    font-size: 1.5vw;
+    margin-bottom: 0.1vh;
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--color-2);
+}
+
+.main .footer .right textarea
+{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    height: 3vh;
+    resize: none;
+    outline: none;
+}
+
+.main .footer .right .textareas
+{
+    width: 22.5vw;
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 1vh;
+}
+
+.main .footer .right .textareas textarea
+{
+    height: 2vh;
+    width: 9.75vw;
+}
+
+.main .footer .right>textarea
+{
+    resize: vertical;
+}
+
+.main .footer .right .buttons
+{
+    width: 22.5vw;
+    margin-top: 1vh;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .footer .right .buttons .button
+{
+    width: 8vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-4);
+    color: var(--color-2);
+    font-size: 0.9vw;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.main .footer .right .buttons .button.send
+{
+    width: 13vw;
+    background: var(--color-2);
+    color: var(--color-4);
+}
